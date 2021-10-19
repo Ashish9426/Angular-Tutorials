@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-3">
+        <nav>
+            <ul>
+                <a href="" *ngFor="let d of Departments" [routerLink]="['search-employee',d.id]">{{d.name}}</a>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-9">
+       <router-outlet></router-outlet>
+    </div>
+</div>

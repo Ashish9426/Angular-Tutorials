@@ -1,0 +1,24 @@
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>DOB</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cust of customers;index as i" (click)="openModal(template,cust)">
+            <td>{{cust.id}}</td>
+            <td>{{cust.name}}</td>
+            <td>{{cust.email}}</td>
+            <td>{{cust.dob}}</td>
+            <td><img [src]="cust.avatar" height="50" width="70"></td>
+
+        </tr>
+    </tbody>
+</table>
+<ng-template #template>
+<app-editcustomer [customerchild]="customer"></app-editcustomer>
+</ng-template>

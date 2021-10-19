@@ -1,0 +1,7 @@
+{
+    "orders":[
+        {"order_id":101,"customername":"sushil","order_item":"pizaa"},
+        {"order_id":102,"customername":"mahesh","order_item":"pizaa"},
+        {"order_id":103,"customername":"ankit","order_item":"burger"}     
+    ]
+}

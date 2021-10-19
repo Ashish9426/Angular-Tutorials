@@ -1,0 +1,83 @@
+<!--
+<h3>{{title}}</h3>
+
+<input type="text" [(ngModel)]="message">
+<hr>
+<p>Message: {{message}}</p>
+-->
+<!--
+<ul>
+    <li *ngFor="let c of countries; index as i">index: {{i}} {{c}}</li>
+</ul>
+<select  class="form-control" >
+    <option value="">Select Country</option>
+    <option *ngFor="let c of countries" [value]="c">{{c}}</option>
+</select>
+-->
+<div class="container-fluid">
+<button (click)="loadEmployee(10)">Load Employees</button>
+
+<ng-container *ngIf="employees.length>0 then datafound; else nodata "></ng-container>
+
+<ng-template #nodata><div class="alert alert-danger" >No Employee record found !</div></ng-template>
+<ng-template #datafound>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Salary</th>
+            <th>DOB</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <tr *ngFor="let emp of employees" [style.backgroundColor]="emp.salary>=15000?'green':'orange'"> -->
+              <!-- <tr *ngFor="let emp of employees" [ngStyle]="emp.salary>=15000?{'color':'#fff','background':'green'}:{'color':'red','background':'yellow'}"> -->
+
+                <!-- <tr *ngFor="let emp of employees" [ngStyle]="emp.salary>=15000?style1:style2"> -->
+                    <!-- <tr *ngFor="let emp of employees" [class.bg-success]="emp.salary>=15000"> -->
+                        <!-- <tr *ngFor="let emp of employees" [ngClass]='emp.salary>=15000?"bg-success":"bg-danger"'> -->
+
+                            <tr *ngFor="let emp of employees" [ngClass]='emp.salary>=15000?obj1:obj2'>
+            <td>{{emp.id}}</td>
+            <td>{{emp.name|formatname:emp.gender}}</td>
+            <td>{{emp.gender|formatgender}}</td>
+            <td>{{emp.salary|currency}}</td>
+            <td>{{emp.dob|date:'mediumDate'}}</td>
+        </tr>
+    </tbody>
+</table>
+</ng-template>
+
+
+<!-- ng switch example-->
+<div [ngSwitch]="day">
+    <h3 *ngSwitchCase="0">Sunday</h3>
+    <h3 *ngSwitchCase="1">Monday</h3>
+    <h3 *ngSwitchCase="2">Tuesday</h3>
+    <h3 *ngSwitchCase="3">Wednesday</h3>
+    <h3 *ngSwitchCase="4">Thursday</h3>
+    <h3 *ngSwitchCase="5">Friday</h3>
+    <h3 *ngSwitchCase="6">Saturday</h3>
+    <h3 *ngSwitchDefault>No Match</h3>
+</div>
+
+<p appChangebg>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nesciunt illo accusantium, aperiam unde numquam, est soluta temporibus ex officia ut quisquam dignissimos nostrum dolores exercitationem. Dolore omnis aspernatur non?
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

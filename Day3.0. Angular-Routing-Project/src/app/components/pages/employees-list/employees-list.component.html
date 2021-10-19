@@ -1,0 +1,14 @@
+<div class="alert alert-success">
+    <h3>Total Employee: {{Employees.length}}</h3>
+</div>
+<div class="card" *ngFor="let emp of Employees">
+    <div class="card-header btn-success text-danger">Name: {{emp.name}}</div>
+    <div class="card-body"><img [src]="emp.photo" height="100" width="100">
+    <hr>
+    Email: {{emp.email}} Gender:{{emp.gender}}
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-info">Details</button>
+    </div>
+</div>

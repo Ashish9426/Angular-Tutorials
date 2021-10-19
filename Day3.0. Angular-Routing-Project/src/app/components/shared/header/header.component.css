@@ -1,0 +1,16 @@
+.header{
+    height: 90px;
+    background-color: darkcyan;
+}
+.nav ul a {
+   padding: 12px;
+   background-color: darkgreen;
+   color: #fff;
+   margin-left: 4px;
+   text-decoration: none;
+}
+.nav{
+    position: relative;
+    margin-left: 53%;
+    top: -17px;
+}

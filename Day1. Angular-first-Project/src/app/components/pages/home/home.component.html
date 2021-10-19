@@ -1,0 +1,16 @@
+<p>home works! sdgf</p>
+<!--
+<h3>{{title}}</h3>
+
+<input type="text" [(ngModel)]="message">
+<hr>
+<p>Message: {{message}}</p>
+-->
+
+<ul>
+    <li *ngFor="let c of countries; index as i">index: {{i}} {{c}}</li>
+</ul>
+<select name="" id="">
+    <option value="">Select Country</option>
+    <option *ngFor="let c of countries" [value]="c">{{c}}</option>
+</select>

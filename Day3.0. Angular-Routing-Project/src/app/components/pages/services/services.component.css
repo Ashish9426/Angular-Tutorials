@@ -1,0 +1,10 @@
+nav ul a{
+    display: block;
+    padding: 12px;
+    background-color: sienna;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 70%;
+}

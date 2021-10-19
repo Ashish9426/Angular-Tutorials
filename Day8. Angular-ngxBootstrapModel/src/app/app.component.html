@@ -1,0 +1,34 @@
+<!-- 
+<app-customer></app-customer> -->
+
+<button class="btn btn-success" (click)="AddNew(employee)">Add New</button>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-12 col-md-4 form-group mb-3">
+          <input type="text"
+                 placeholder="Datepicker"
+                 class="form-control"
+                 bsDatepicker>
+        </div>
+        </div>
+</div>
+<ng-template #employee>
+<div class="modal-header">
+   
+        <h4 class="modal-title pull-left">Just Asking</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="CloseModal()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+          </button>
+  
+</div>
+<div class="modal-body">
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis odio ex numquam sed maiores, nisi unde, nihil libero deserunt quis vel suscipit iusto! Magnam excepturi provident cupiditate, officia ex facilis.
+    </p>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-success">Submit</button>
+    <button class="btn btn-danger" (click)="CloseModal()">Close</button>
+</div>
+</ng-template>
