@@ -1,0 +1,6 @@
+<!-- <input type="text" [(ngModel)]="message"> -->
+<!-- <app-customer [msg]="message"></app-customer> -->
+
+<h4>message from  child : {{msg}}</h4>
+
+<app-customer (message)="receiver($event)"></app-customer>
