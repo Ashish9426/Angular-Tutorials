@@ -1,0 +1,26 @@
+{
+  "tutorials": [
+    {
+      "id": 1,
+      "title": "One night at call center",
+      "description": "story based on One night at call center",
+      "published": "2021-09-20 16:50:20"
+    },
+    {
+      "title": "True Love",
+      "description": "True love is internal love and it is not a physical love",
+      "published": false,
+      "id": 2
+    },
+    {
+      "title": "Madhushala",
+      "description": "written by Harivansh Ray bacchhan",
+      "id": 3
+    },
+    {
+      "title": "Garar me sagar",
+      "description": "writen by bihari",
+      "id": 4
+    }
+  ]
+}
