@@ -1,0 +1,27 @@
+<!-- <h4>Welcome to Dashboard</h4> -->
+
+<div class="header">
+
+</div>
+<div class="sidenav">
+    <div class="form-control">
+        <img [src]="src" class="img-circle">
+    </div>
+
+    <a href="" routerLink="product-menu">Show Products</a>
+    <a href="" routerLink="order-product">Create Products</a>
+    <!-- <a href="#clients">Clients</a> -->
+
+    <div class="box">
+        <a class="already" href="">Create Customer</a>
+        <a class="already" href="">Change Password</a>
+        <button (click)="logout()">Logout</button>
+
+    </div>
+</div>
+
+
+
+<div class="main">
+    <router-outlet></router-outlet>
+</div>

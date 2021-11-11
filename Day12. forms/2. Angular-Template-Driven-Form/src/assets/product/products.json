@@ -1,0 +1,14 @@
+{
+    "Products": [
+        { "product_id": 1, "product_name": "Bulb", "customername": "Soni" },
+        { "product_id": 2, "product_name": "Telivision", "customername": "Anita" },
+        { "product_id": 3, "product_name": "Sofa", "customername": "Arun" },
+        { "product_id": 4, "product_name": "Chair", "customername": "Vishal" },
+        { "product_id": 5, "product_name": "Laptop", "customername": "Deepak" },
+        { "product_id": 6, "product_name": "Battery", "customername": "Mukul" },
+        { "product_id": 7, "product_name": "Mobile", "customername": "Jyoti" },
+        { "product_id": 8, "product_name": "Table", "customername": "Abhay" },
+        { "product_id": 9, "product_name": "Earphone", "customername": "Govind" },
+        { "product_id": 10, "product_name": "Charger", "customername": "Rahul" }
+    ]
+}

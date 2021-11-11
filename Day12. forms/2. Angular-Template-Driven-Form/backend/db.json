@@ -1,0 +1,28 @@
+{
+  "orders": [
+    {
+      "product": "Mobile",
+      "customer": "soni",
+      "time": "2021-09-26T20:53:45.891Z",
+      "id": 5
+    },
+    {
+      "product": "Charger",
+      "customer": "keshav",
+      "time": "2021-09-26T20:53:53.506Z",
+      "id": 6
+    },
+    {
+      "product": "Comb",
+      "customer": "rahul",
+      "time": "2021-09-26T20:54:48.460Z",
+      "id": 8
+    },
+    {
+      "product": "Laptop",
+      "customer": "vish",
+      "time": "2021-09-26T22:44:10.051Z",
+      "id": 9
+    }
+  ]
+}

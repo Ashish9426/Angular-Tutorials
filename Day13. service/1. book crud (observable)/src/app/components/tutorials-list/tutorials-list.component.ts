@@ -44,9 +44,7 @@ export class TutorialsListComponent implements OnInit {
   }
 
   removeAllTutorials(): void {
-    this.tutorialService.deleteAll()
-      .subscribe(
-        response => {
+    this.tutorialService.deleteAll().subscribe(response => {
           console.log(response);
           this.refreshList();
         },

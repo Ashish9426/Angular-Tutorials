@@ -1,0 +1,38 @@
+<!-- <p>order-product works!</p> -->
+
+<div class="row">
+
+    <div class="col-6 offset-3 pt-3">
+        <div class="card">
+            <div class="card-header">
+                <h4>Order Product</h4>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="submit()" [formGroup]="orderdata">
+                    <div class="form-group">
+                        <select name="product" id="" class="form-control" formControlName="product">
+                    <option value="">Select Product</option>
+                    <option value="Chair">Chair</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Comb">Comb</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Charger">Charger</option>
+                    <option value="Television">Television</option>
+                    <option value="Table">Table</option>
+
+                </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Customer Name</label>
+                        <input type="text" class="form-control" formControlName="customer">
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-success">Place Order</button>
+                        <button class="btn btn-danger">Cancel Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
