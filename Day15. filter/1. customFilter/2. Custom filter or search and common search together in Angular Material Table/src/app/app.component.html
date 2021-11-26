@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-12 text-center">
+    <label for="Heading" class="form-control">
+      Angular - Custom filter or search and common search together in Angular Material Table
+    </label>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div class="example-container mat-elevation-z8">
+      <div class="col-12 text-right">
+        <button class="btn btn-sm btn-secondary ml-5" [matMenuTriggerFor]="filterBy">Custom filter</button>
+        <mat-menu #filterBy="matMenu">
+          <div (click)="$event.stopPropagation()">
+            <div *ngFor="let filter of customFilters">
+              <span class="ml-1">
+                {{filter.column}}
+              </span>
+              <span class="ml-1 mr-1">like</span>
+              <span>
+                <input class="form-control-sm ml-1 mr-1" type="text" placeholder="Search for" style="max-width: 150px;"
+                  [(ngModel)]="filter.value">
+              </span>
+            </div>
+            <span>
+              <button class="btn btn-sm btn-light ml-2" *ngIf="!addFilterFlag" mat-raised-button
+                (click)="$event.stopPropagation(); addFilterFlag = true" title=" Add Filter">
+                <i class="fa fa-plus-square" aria-hidden="true"></i> Add Filter
+              </button>
+              <div *ngIf="addFilterFlag">
+                <select class="ml-2" [(ngModel)]="selectedCustomColumn">
+                  <ng-container *ngFor="let column of displayedColumns">
+                    <option value="null" disabled hidden></option>
+                    <option *ngIf="ifExists(column)" [value]="column">{{column}}</option>
+                  </ng-container>
+                </select>
+                <button class="btn btn-sm btn-light ml-2 mr-2"
+                  (click)="addFilter(selectedCustomColumn);addFilterFlag = false">Add</button>
+              </div>
+              <button class="btn btn-sm btn-primary ml-2" (click)="customSearch()">Search</button>
+              <button class="btn btn-sm btn-primary ml-2 mr-2" (click)="clearCustomFilter()">Clear</button>
+            </span>
+          </div>
+        </mat-menu>
+        <input class="form-control-sm ml-2" type="text" #inp>
+        <button class="btn btn-sm btn-primary ml-1" (click)="applyFilter(inp.value)">Search</button>
+        <button class="btn btn-sm btn-primary ml-2 mr-2" (click)="clearCommonFilter(inp)">Clear</button>
+      </div>
+
+      <mat-table #table [dataSource]="dataSource" multiTemplateDataRows>
+        <!-- Roll No Column -->
+        <ng-container matColumnDef="rollNo">
+          <mat-header-cell *matHeaderCellDef> Roll No </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.rollNo}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Marks Column -->
+        <ng-container matColumnDef="marks">
+          <mat-header-cell *matHeaderCellDef> Marks </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.marks}} </mat-cell>
+        </ng-container>
+
+        <!-- Standard Column -->
+        <ng-container matColumnDef="standard">
+          <mat-header-cell *matHeaderCellDef> Standard </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.standard}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" matRipple class="element-row"></mat-row>
+      </mat-table>
+    </div>
+  </div>
+</div>
